@@ -37,7 +37,7 @@ def opcion_3():
             with open("trabajadores_por_cargo.txt","w") as archivo:
                 for t in trabajadores:
                     if cargos[opc2-1]==t[1]:
-                        texto = f"{t[0]} {t[1]} {t[2]} {t[3]} {t[4]} {t[5]}\n"
+                        texto = f"NOMBRE: {t[0]}\nCargo: {t[1]}\nBruto: {t[2]}\ndesc. Salud:  {t[3]}\ndesc. AFP: {t[4]}\nLiquido {t[5]}"
                         archivo.write(texto)
         print("ARCHIVO CREADO CON ÉXITO!")
 
