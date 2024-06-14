@@ -1,5 +1,6 @@
 import os, time
 
+trabajadores = []
 while True:
     print("MENÚ TRABAJADORES")
     print("1. Registrar trabajador")
@@ -9,7 +10,16 @@ while True:
     opc = int(input("Ingrese opción: "))
     os.system('cls')
     if opc==1:
-        pass
+        print("REGISTRAR TRABAJADOR")
+        nombre_apellido = input("Ingrese su nombre y apellido: ")
+        cargo = int(input("Ingrese cargo(1:CEO, 2:DESARROLLADOR, 3:ANALISTA): "))
+        sueldo_bruto = int(input("Ingrese sueldo bruto: "))
+        desc_salud = int(7/100 * sueldo_bruto)
+        desc_afp = int(0.12 * sueldo_bruto)
+        sueldo_liquido = sueldo_bruto-desc_salud-desc_afp
+        trabajador = [nombre_apellido,cargo,sueldo_bruto,desc_salud,desc_afp,sueldo_liquido]
+        trabajadores.append(trabajador)
+        print("TRABAJADOR REGISTRADO CON ÉXITO!")
     elif opc==2:
         pass
     elif opc==3:
